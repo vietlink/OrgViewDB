@@ -1,0 +1,16 @@
+/****** Object:  Procedure [dbo].[uspGetTimesheetSummaryByTimesheetID]    Committed by VersionSQL https://www.versionsql.com ******/
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[uspGetTimesheetSummaryByTimesheetID](@timesheetHeaderId int)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    SELECT * FROM TimesheetSummary WHERE TimesheetHeaderID = @timesheetHeaderId AND [Week] IS NULL
+END
