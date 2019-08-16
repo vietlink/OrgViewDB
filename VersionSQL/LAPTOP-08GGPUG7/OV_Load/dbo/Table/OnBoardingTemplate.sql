@@ -7,11 +7,9 @@ CREATE TABLE [dbo].[OnBoardingTemplate](
 	[Description] [varchar](100) NOT NULL,
 	[OnBoardingTypeID] [int] NOT NULL,
 	[Html] [varchar](max) NULL,
-	[isDeleted] [bit] NULL,
  CONSTRAINT [PK_OnBoardingTemplate] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-ALTER TABLE [dbo].[OnBoardingTemplate] ADD  CONSTRAINT [DF_OnBoardingTemplate_isDeleted]  DEFAULT ((0)) FOR [isDeleted]

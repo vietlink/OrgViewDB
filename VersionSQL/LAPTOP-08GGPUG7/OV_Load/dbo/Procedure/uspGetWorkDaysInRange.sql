@@ -5,7 +5,7 @@
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE [dbo].[uspGetWorkDaysInRange](@empId int, @dateFrom datetime, @dateTo datetime)
+create PROCEDURE [dbo].[uspGetWorkDaysInRange](@empId int, @dateFrom datetime, @dateTo datetime)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -28,6 +28,5 @@ BEGIN
 	FROM #dateRange
 	OUTER APPLY
 	dbo.fnGetWorkDayData(@empId, dateValue, dbo.fnGetWorkHourHeaderIDByDay(@empId, dateValue))
-	ORDER BY dateValue
 	DROP TABLE #dateRange;
 END
