@@ -9,6 +9,7 @@ CREATE TABLE [dbo].[DocumentTypes](
 	[IsDeleted] [bit] NOT NULL,
 	[Editable] [bit] NOT NULL,
 	[Comments] [varchar](500) NULL,
+	[iflag] [bit] NULL,
  CONSTRAINT [PK_DocumentTypes] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
