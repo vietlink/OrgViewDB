@@ -20,6 +20,7 @@ BEGIN
 	SET NOCOUNT ON;
 	DECLARE @documentTypeEntityID int= (SELECT id FROM Entity WHERE tablename='DocumentTypes')	
     -- Insert statements for procedure here	
+	print @id;
 	IF (@id=0) BEGIN
 		INSERT INTO DocumentTypes (Code, Description, Comments) 
 		VALUES (@docTypeCode, @docTypeTitle, @docTypeDesc)
