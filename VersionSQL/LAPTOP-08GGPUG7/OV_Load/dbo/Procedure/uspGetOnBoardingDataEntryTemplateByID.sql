@@ -12,6 +12,6 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
-    SELECT * FROM OnBoardingDataEntryTemplate WHERE ID = @id
+    SELECT * FROM OnBoardingDataEntryTemplate WHERE ID = @id or @id=0
 END
 
